@@ -1,86 +1,13 @@
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "../../redux/slice/darkModeSlice";
 import "./index.scss";
-import { useEffect } from "react";
-import Chart from 'chart.js/auto';
+import PurpleCard from "../cards/purpleCard";
+import YellowCard from "../cards/yollowCard";
+import GreenCard from "../cards/greenCard";
+import VioletCard from "../cards/violetCard";
 const ValuteSec = () => {
   const isDarkModeEnabled = useSelector(selectDarkMode);
-  useEffect(() => {
-    const ctx = document.getElementById("chart").getContext('2d');
 
-    var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(0, "#ff6c00");
-    gradientStroke.addColorStop(1, "#ff3b74");
-
-    var gradientBkgrd = ctx.createLinearGradient(0, 100, 0, 400);
-    gradientBkgrd.addColorStop(0, "rgba(244,94,132,0.2)");
-    gradientBkgrd.addColorStop(1, "rgba(249,135,94,0)");
-
-    let draw = Chart.controllers.line.prototype.draw;
-    Chart.controllers.line = Chart.controllers.line.extend({
-      draw: function () {
-        draw.apply(this, arguments);
-        let ctx = this.chart.chart.ctx;
-        let _stroke = ctx.stroke;
-        ctx.stroke = function () {
-          ctx.save();
-          ctx.shadowBlur = 8;
-          ctx.shadowOffsetX = 0;
-          ctx.shadowOffsetY = 6;
-          _stroke.apply(this, arguments)
-          ctx.restore();
-        }
-      }
-    });
-
-    var chart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-        datasets: [{
-          label: "Income",
-          backgroundColor: gradientBkgrd,
-          borderColor: gradientStroke,
-          data: [5500, 2500, 10000, 6000, 14000, 1500, 7000, 20000],
-          pointBorderColor: "rgba(255,255,255,0)",
-          pointBackgroundColor: "rgba(255,255,255,0)",
-          pointBorderWidth: 0,
-          pointHoverRadius: 8,
-          pointHoverBackgroundColor: gradientStroke,
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 4,
-          pointRadius: 1,
-          borderWidth: 5,
-          pointHitRadius: 16,
-        }]
-      },
-      options: {
-        tooltips: {
-          backgroundColor: '#fff',
-          displayColors: false,
-          titleFontColor: '#000',
-          bodyFontColor: '#000'
-        },
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            gridLines: {
-              display: false
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              callback: function (value, index, values) {
-                return (value / 1000) + 'K';
-              }
-            }
-          }],
-        }
-      }
-    });
-  }, [])
   return (
     <div id="valute">
       <div
@@ -90,9 +17,108 @@ const ValuteSec = () => {
       >
         <div className="containerForValute">
           <div className="cardSec">
-            <div className="row">
-              <div className="chart__container">
-              <canvas id="chart" width="600" height="300"></canvas>
+            <div className="card">
+              <div className="topSec">
+                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                  Coins
+                </h3>
+              </div>
+              <div className="btmSec">
+                <div className="mainBtmSecDiv">
+                  <div className="leftSec">
+                    <h2
+                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
+                    >
+                      9.43M
+                    </h2>
+                    <h4
+                      style={{ color: isDarkModeEnabled ? "#95A1B2" : "black" }}
+                    >
+                      24H Value(Usd)
+                    </h4>
+                  </div>
+                  <div className="rightSec">
+                    <YellowCard />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="topSec">
+                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                  24H Price Change
+                </h3>
+              </div>
+              <div className="btmSec">
+                <div className="mainBtmSecDiv">
+                  <div className="leftSec">
+                    <h2
+                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
+                    >
+                      683
+                    </h2>
+                    <h4
+                      style={{
+                        color: "#0DE7B2",
+                        fontSize: "14px",
+                        fontWeight: "400",
+                      }}
+                    >
+                      +1.12%
+                    </h4>
+                  </div>
+                  <div className="rightSec">
+                    <GreenCard />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="topSec">
+                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                  Total Market Cap(USD)
+                </h3>
+              </div>
+              <div className="btmSec">
+                <div className="mainBtmSecDiv">
+                  <div className="leftSec">
+                    <h2
+                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
+                    >
+                      1211.58B
+                    </h2>
+                    <h4 style={{ color: "#FF3F57" }}>-1.12%</h4>
+                  </div>
+                  <div className="rightSec">
+                    <VioletCard />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="topSec">
+                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                  24H Value(USD)
+                </h3>
+              </div>
+              <div className="btmSec">
+                <div className="mainBtmSecDiv">
+                  <div className="leftSec">
+                    <h2
+                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
+                    >
+                      28.57M
+                    </h2>
+                    <h4
+                      style={{ color: isDarkModeEnabled ? "#95A1B2" : "black" }}
+                    >
+                      Listed Cryptos
+                    </h4>
+                  </div>
+                  <div className="rightSec">
+                    <PurpleCard />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
