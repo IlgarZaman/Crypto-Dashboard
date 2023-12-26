@@ -1,0 +1,58 @@
+#header {
+  .mainDiv {
+    height: 80px;
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .leftSec {
+        display: flex;
+        align-items: center;
+        column-gap: 100px;
+        .logo {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          .fakeLogo {
+            img {
+              width: 50px;
+            }
+          }
+          .logoNameDark {
+            color: white;
+            font-weight: 700;
+          }
+          .logoNameLight {
+            color: black;
+            font-weight: 700;
+          }
+        }
+      }
+      .rightSec {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        column-gap: 50px;
+        .walletBtn {
+            cursor: pointer;
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          background-color: #76ff84;
+          padding: 12px 15px;
+          border-radius: 25px;
+          p {
+            color: #181a20;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          transition: all 0.3s ease 0s;
+          &:hover{
+            background-color: #a5ffaebb;
+          }
+        }
+      }
+    }
+  }
+}

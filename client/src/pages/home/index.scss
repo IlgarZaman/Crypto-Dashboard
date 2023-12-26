@@ -1,0 +1,12 @@
+#home {
+  .mainDiv {
+    display: flex;
+    width: 100%;
+    .menuBarSec {
+      width: 20%;
+    }
+    .valuteSec {
+      width: 80%;
+    }
+  }
+}
