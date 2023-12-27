@@ -1,0 +1,26 @@
+.customTooltip {
+  background-color: #333c48;
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.lightCustomTultip {
+  background-color: #206127;
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.intro {
+  color: #7bff88c0;
+}
+.lightIntro {
+  color: white;
+}
+.label {
+  color: #b1bfd4;
+}
+.lightLabel {
+  color: white;
+}

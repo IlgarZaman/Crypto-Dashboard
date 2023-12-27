@@ -1,12 +1,29 @@
 #home {
+  height: 100vh;
+
   .mainDiv {
     display: flex;
     width: 100%;
+
     .menuBarSec {
       width: 20%;
     }
-    .valuteSec {
+    .mainSec {
       width: 80%;
+      .valuteSec {
+        width: 100%;
+      }
+      .chartAndBtcTable {
+        padding: 0 30px 30px 30px;
+        display: flex;
+        width: 100%;
+        .chart {
+          width: 75%;
+        }
+        .btcTable {
+          width: 25%;
+        }
+      }
     }
   }
 }

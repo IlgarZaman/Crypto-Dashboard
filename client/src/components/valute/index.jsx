@@ -10,30 +10,20 @@ const ValuteSec = () => {
 
   return (
     <div id="valute">
-      <div
-        className={
-          isDarkModeEnabled ? "dark-mode-valute mainDiv" : "mainDiv light-mode"
-        }
-      >
+      <div className={"mainDiv"}>
         <div className="containerForValute">
           <div className="cardSec">
             <div className="card">
               <div className="topSec">
-                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
-                  Coins
-                </h3>
+                <h3 style={{ color: isDarkModeEnabled && "#B1BFD4" }}>Coins</h3>
               </div>
               <div className="btmSec">
                 <div className="mainBtmSecDiv">
                   <div className="leftSec">
-                    <h2
-                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
-                    >
+                    <h2 style={{ color: isDarkModeEnabled && "white" }}>
                       9.43M
                     </h2>
-                    <h4
-                      style={{ color: isDarkModeEnabled ? "#95A1B2" : "black" }}
-                    >
+                    <h4 style={{ color: isDarkModeEnabled && "#95A1B2" }}>
                       24H Value(Usd)
                     </h4>
                   </div>
@@ -45,27 +35,15 @@ const ValuteSec = () => {
             </div>
             <div className="card">
               <div className="topSec">
-                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                <h3 style={{ color: isDarkModeEnabled && "#B1BFD4" }}>
                   24H Price Change
                 </h3>
               </div>
               <div className="btmSec">
                 <div className="mainBtmSecDiv">
                   <div className="leftSec">
-                    <h2
-                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
-                    >
-                      683
-                    </h2>
-                    <h4
-                      style={{
-                        color: "#0DE7B2",
-                        fontSize: "14px",
-                        fontWeight: "400",
-                      }}
-                    >
-                      +1.12%
-                    </h4>
+                    <h2 style={{ color: isDarkModeEnabled && "white" }}>683</h2>
+                    <h4 className="plusDegree">+1.12%</h4>
                   </div>
                   <div className="rightSec">
                     <GreenCard />
@@ -75,19 +53,23 @@ const ValuteSec = () => {
             </div>
             <div className="card">
               <div className="topSec">
-                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                <h3 style={{ color: isDarkModeEnabled && "#B1BFD4" }}>
                   Total Market Cap(USD)
                 </h3>
               </div>
               <div className="btmSec">
                 <div className="mainBtmSecDiv">
                   <div className="leftSec">
-                    <h2
-                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
-                    >
+                    <h2 style={{ color: isDarkModeEnabled && "white" }}>
                       1211.58B
                     </h2>
-                    <h4 style={{ color: "#FF3F57" }}>-1.12%</h4>
+                    <h4
+                      className={
+                        isDarkModeEnabled ? "minusDegree" : "lightMinusDegree"
+                      }
+                    >
+                      -1.12%
+                    </h4>
                   </div>
                   <div className="rightSec">
                     <VioletCard />
@@ -97,21 +79,17 @@ const ValuteSec = () => {
             </div>
             <div className="card">
               <div className="topSec">
-                <h3 style={{ color: isDarkModeEnabled ? "#B1BFD4" : "black" }}>
+                <h3 style={{ color: isDarkModeEnabled && "#B1BFD4" }}>
                   24H Value(USD)
                 </h3>
               </div>
               <div className="btmSec">
                 <div className="mainBtmSecDiv">
                   <div className="leftSec">
-                    <h2
-                      style={{ color: isDarkModeEnabled ? "white" : "black" }}
-                    >
+                    <h2 style={{ color: isDarkModeEnabled && "white" }}>
                       28.57M
                     </h2>
-                    <h4
-                      style={{ color: isDarkModeEnabled ? "#95A1B2" : "black" }}
-                    >
+                    <h4 style={{ color: isDarkModeEnabled && "#95A1B2" }}>
                       Listed Cryptos
                     </h4>
                   </div>

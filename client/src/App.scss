@@ -1,0 +1,40 @@
+.dark-mode {
+  background-color: #181a20;
+}
+
+.light-mode {
+  background-color: #edebe5;
+  .containerForValute {
+    .cardSec {
+      .card {
+        background-color: #388e3c !important;
+        .topSec {
+          h3 {
+            color: white;
+          }
+        }
+        .btmSec {
+          .mainBtmSecDiv {
+            .leftSec {
+              h2 {
+                color: rgba(255, 255, 255, 0.899);
+              }
+              .lightMinusDegree {
+                color: rgba(214, 21, 21, 0.718);
+                font-weight: 600 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mainDivChart{
+    background-color: #388e3c !important;
+
+  }
+
+}
+.dark-mode-main {
+  background-color: #191c25;
+}

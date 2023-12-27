@@ -1,5 +1,5 @@
 import { ResponsiveContainer, Area, AreaChart } from "recharts";
-
+import "./index.scss"
 const data = [
   { pv: 4500 },
   { pv: 4000 },
@@ -19,12 +19,12 @@ const data = [
 ];
 const PurpleCard = () => {
   return (
-    <div>
-      <ResponsiveContainer width={130} height={80}>
+    <div className="miniCards">
+      <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorPv4" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#9848F4" stopOpacity={0.8} />
+              <stop offset="5%" stopColor="#9848F4" stopOpacity={0.6} />
               <stop offset="95%" stopColor="#9848F4" stopOpacity={0} />
             </linearGradient>
           </defs>

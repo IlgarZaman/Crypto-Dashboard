@@ -1,0 +1,60 @@
+#chart {
+  padding: 0 30px 0 0;
+  .mainDivChart {
+    background-color: #393e4d83;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    padding-top: 10px;
+    .graphHead {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      padding: 30px;
+      align-items: center;
+      justify-content: space-between;
+      .headH2 {
+        font-weight: 500;
+      }
+      .timeBtns {
+        .lightTimeBtn {
+          cursor: pointer;
+          border: none;
+          padding: 5px 10px;
+          color: black;
+          background-color: white;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background-color: #d7f4d7b6;
+          }
+        }
+        .darkTimeBtn {
+          cursor: pointer;
+          border: none;
+          padding: 5px 10px;
+          color: #8993a4;
+          background-color: #393e4d;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background-color: #d7f4d75c;
+            color: black;
+          }
+        }
+        .colorful {
+          background-color: #6fff7d;
+          color: black;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            background-color: #63f672c4;
+          }
+        }
+      }
+    }
+    .graph {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -10,7 +10,6 @@ import { RiSettings4Line } from "react-icons/ri";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { useState } from "react";
 const MenuBar = () => {
-  const [show, setShow] = useState("");
 
   const isDarkModeEnabled = useSelector(selectDarkMode);
 
@@ -24,7 +23,6 @@ const MenuBar = () => {
     });
 
     clickedBtn.classList.add("colorful");
-    setShow(clickedBtn.parentElement.classList.value);
   };
   return (
     <div id="menuBar">

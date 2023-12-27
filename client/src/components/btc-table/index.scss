@@ -1,0 +1,76 @@
+#btcTable {
+  .darkBtcTable {
+    background-color: #393e4d83;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    .btcHeader {
+      border-bottom: 2px solid #393e4dde;
+      padding-bottom: 10px;
+      .btcH2 {
+        font-weight: 500;
+      }
+    }
+    .btcDetails {
+      padding-top: 30px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+        li {
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            font-size: 16px;
+            color: #5e667a;
+            font-weight: 500;
+          }
+          .red {
+            color: #ff3f57;
+          }
+          .green {
+            color: #0de7b2;
+          }
+        }
+      }
+    }
+  }
+  .lightBtcTable {
+    background-color: #388e3c;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    .btcHeader {
+      border-bottom: 2px solid #393e4dde;
+      padding-bottom: 10px;
+      .btcH2 {
+        font-weight: 500;
+      }
+    }
+    .btcDetails {
+      padding-top: 30px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+        li {
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+          }
+          .red {
+            color: rgba(214, 21, 21, 0.718);
+          }
+          .green {
+            color: #0de7b2;
+          }
+        }
+      }
+    }
+  }
+}
