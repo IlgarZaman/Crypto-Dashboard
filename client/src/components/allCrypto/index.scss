@@ -1,0 +1,151 @@
+#allCrypto {
+  padding: 0 30px 30px 30px;
+  .mainDiv {
+    .darkMode {
+      background-color: #393e4d83;
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      .headSec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        .searchInput {
+          width: 200px;
+          padding: 8px 24px;
+        }
+        .headName {
+          h3 {
+            padding: 8px 0 10px 8px;
+            color: #d8e0ee;
+            font-weight: 500;
+          }
+        }
+      }
+      .tabSec {
+        table {
+          width: 100%;
+          thead {
+            tr {
+              padding: 5px 0;
+
+              display: flex;
+              border-top: 1px solid #5e667a6d;
+              th {
+                width: calc(100% / 7);
+                font-weight: 400;
+                color: #95a1b2;
+                text-align: left;
+                padding: 8px;
+                position: relative;
+              }
+            }
+          }
+          tbody {
+            tr {
+              border-top: 1px solid #5e667a6d;
+
+              display: flex;
+              align-items: center;
+              .name {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+              }
+              td {
+                color: white;
+                font-size: 14px;
+                img {
+                  width: 30px;
+                  border-radius: 50%;
+                }
+                flex: 1;
+                padding: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .lightMode {
+      width: 100%;
+      background-color: #388e3c;
+      border-radius: 15px;
+      padding: 15px 15px 10px 15px;
+      .headSec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        .searchInput {
+          width: 200px;
+          padding: 8px 24px;
+          color: #d8e0ee;
+          border: 1px solid #d8e0ee;
+          transition: all 250ms ease-in-out;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          &::placeholder {
+            color: #d8e0ee;
+          }
+          &:focus {
+            padding: 8px 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #d8e0ee;
+          }
+        }
+        .headName {
+          h3 {
+            padding: 8px 0 10px 8px;
+            color: #d8e0ee;
+            font-weight: 500;
+          }
+        }
+      }
+      .tabSec {
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          thead {
+            tr {
+              display: flex;
+              border-top: 1px solid #95a1b2;
+              padding: 5px 0;
+              th {
+                width: calc(100% / 7);
+                font-weight: 400;
+                color: #d8e0ee;
+                text-align: left;
+                padding: 8px;
+                position: relative;
+              }
+            }
+          }
+          tbody {
+            tr {
+              border-top: 1px solid #95a1b2;
+              display: flex;
+              align-items: center;
+              .name {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+              }
+              td {
+                color: white;
+                font-size: 14px;
+                img {
+                  width: 30px;
+                  border-radius: 50%;
+                }
+                flex: 1;
+                padding: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

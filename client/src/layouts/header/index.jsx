@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./index.scss";
-import "./input.css";
 import {
   selectDarkMode,
   toggleDarkMode,
@@ -42,7 +41,7 @@ const Header = () => {
               <div className="search">
                 <input
                   type="text"
-                  className="search__input"
+                  className="searchInput"
                   placeholder="Search..."
                 />
               </div>

@@ -4,7 +4,6 @@ import {
   ResponsiveContainer,
   AreaChart,
   Area,
-  Line,
   XAxis,
   YAxis,
   Tooltip,
@@ -63,7 +62,7 @@ const Chart = () => {
           x={0}
           y={0}
           dy={payload.value === 0 ? 0 : 16}
-          fill={isDarkModeEnabled ? "#95a1b2" : "white"}
+          fill={isDarkModeEnabled ? "#B1BFD4" : "white"}
           textAnchor="end"
         >
           {payload.value === 0 ? 0 : `${payload.value / 1000}k`}
@@ -100,7 +99,7 @@ const Chart = () => {
             x={0}
             y={0}
             dy={16}
-            fill={isDarkModeEnabled ? "#95a1b2" : "white"}
+            fill={isDarkModeEnabled ? "#B1BFD4" : "white"}
             textAnchor="middle"
           >
             {year}
@@ -113,12 +112,12 @@ const Chart = () => {
   };
   const handleInfoClick = (event) => {
     const clickedBtn = event.target;
-    const parentElements = document.querySelectorAll(".colorful");
+    const parentElements = document.querySelectorAll(".colorful2");
     parentElements.forEach((parentElement) => {
-      parentElement.classList.remove("colorful");
+      parentElement.classList.remove("colorful2");
     });
 
-    clickedBtn.classList.add("colorful");
+    clickedBtn.classList.add("colorful2");
   };
   return (
     <div id="chart">
@@ -140,8 +139,8 @@ const Chart = () => {
                 }}
                 className={
                   isDarkModeEnabled
-                    ? "darkTimeBtn colorful"
-                    : "lightTimeBtn colorful"
+                    ? "darkTimeBtn colorful2"
+                    : "lightTimeBtn colorful2"
                 }
               >
                 All
@@ -189,12 +188,12 @@ const Chart = () => {
                   <linearGradient id="colorPv5" x1="0" y1="0" x2="0" y2="1">
                     <stop
                       offset="10%"
-                      stopColor={isDarkModeEnabled ? "#8E98FF" : "2c2732"}
+                      stopColor={isDarkModeEnabled ? "#8E98FF" : "#2c2732"}
                       stopOpacity={0.6}
                     />
                     <stop
                       offset="70%"
-                      stopColor={isDarkModeEnabled ? "#8E98FF" : "2c2732"}
+                      stopColor={isDarkModeEnabled ? "#8E98FF" : "#2c2732"}
                       stopOpacity={0.03}
                     />
                   </linearGradient>
@@ -202,7 +201,7 @@ const Chart = () => {
                 <CartesianGrid
                   strokeDasharray="3 0"
                   vertical={false}
-                  stroke="#5e667a"
+                  stroke={isDarkModeEnabled ? "#5e667a" : "#95a1b2"}
                   strokeWidth={0.3}
                 />
                 <XAxis dataKey="name" tick={<CustomXAxisTick />} />
@@ -217,13 +216,6 @@ const Chart = () => {
                   dataKey="pv"
                   fill="url(#colorPv5)"
                   stroke={isDarkModeEnabled ? "#8E98FF" : "#2c2732"}
-                  strokeWidth={2}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="pv"
-                  dot={false}
-                  stroke="#ffcc00"
                   strokeWidth={2}
                 />
               </AreaChart>

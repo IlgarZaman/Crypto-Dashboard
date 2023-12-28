@@ -1,19 +1,14 @@
-import { useEffect } from "react";
 import "./index.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { allCrypto, selectCryptoData } from "../../redux/slice/crypto";
+import { useSelector } from "react-redux";
 import { selectDarkMode } from "../../redux/slice/darkModeSlice";
 import MenuBar from "../../components/menu";
 import ValuteSec from "../../components/valute";
 import Chart from "../../components/chart";
 import BtcTable from "../../components/btc-table";
+import AllCrypto from "../../components/allCrypto";
 const Home = () => {
-  const dispatch = useDispatch();
-  const initialProducts = useSelector(selectCryptoData);
   const isDarkModeEnabled = useSelector(selectDarkMode);
-  useEffect(() => {
-    dispatch(allCrypto());
-  }, []);
+
   return (
     <div id="home">
       <div
@@ -35,6 +30,9 @@ const Home = () => {
             <div className="btcTable">
               <BtcTable />
             </div>
+          </div>
+          <div className="allCryptoTable">
+            <AllCrypto />
           </div>
         </div>
       </div>
