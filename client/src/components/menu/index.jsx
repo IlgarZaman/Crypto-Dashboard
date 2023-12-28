@@ -8,12 +8,8 @@ import { RiShoppingCartFill } from "react-icons/ri";
 import { SiFuturelearn } from "react-icons/si";
 import { RiSettings4Line } from "react-icons/ri";
 import { IoMdHelpCircleOutline } from "react-icons/io";
-import { useState } from "react";
 const MenuBar = () => {
-
   const isDarkModeEnabled = useSelector(selectDarkMode);
-
-  // ------------------------------------------
 
   const handleInfoClick = (event) => {
     const clickedBtn = event.target;
