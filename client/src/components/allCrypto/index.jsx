@@ -13,7 +13,6 @@ import BnbLogo from "../../assets/source.png";
 import EthLogo from "../../assets/Ethereum.jpg";
 import PositiveCard from "../cards/positiveCard";
 import NegativeCard from "../cards/negativeChart";
-
 const AllCrypto = () => {
   const dispatch = useDispatch();
   const initialProducts = useSelector(selectCryptoData);
@@ -36,8 +35,11 @@ const AllCrypto = () => {
     const newSearchTerm = e.target.value;
     dispatch(searchProducts(newSearchTerm));
   };
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div id="allCrypto">
+    <div id="allCrypto" data-aos="zoom-in">
       <div className="mainDiv">
         <div className={isDarkModeEnabled ? "darkMode" : "lightMode"}>
           <div className="headSec">
@@ -102,7 +104,7 @@ const AllCrypto = () => {
                     <td>{`${(product.volumeUsd24Hr / 100000).toFixed(
                       0
                     )} BTC`}</td>
-                    <td>{(product.marketCapUsd / 1000000).toFixed(0)}BTC</td>
+                    <td>{(product.marketCapUsd / 1000000).toFixed(0)} BTC</td>
                     <td>
                       {product.changePercent24Hr > 0 ? (
                         <PositiveCard />

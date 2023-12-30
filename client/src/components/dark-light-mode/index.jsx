@@ -6,11 +6,13 @@ import {
 } from "../../redux/slice/darkModeSlice";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
+import { useEffect } from "react";
 const DarkLightMode = () => {
   const dispatch = useDispatch();
   const handleToggleDarkMode = () => {
     dispatch(toggleDarkMode());
   };
+
   const isDarkModeEnabled = useSelector(selectDarkMode);
   return (
     <div id="darkLightMode">
